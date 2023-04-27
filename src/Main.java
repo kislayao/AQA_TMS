@@ -31,5 +31,22 @@ public class Main {
         double weight = 88.88;
         char symbol = 'A';
 
+        // New HT
+        //Task number 1
+        System.out.println("    |    |");
+        System.out.println("____|____|____");
+        System.out.println("    |    |");
+        System.out.println("____|____|____");
+        System.out.println("    |    |");
+        System.out.println("    |    |");
+
+        //Task number 2
+        String tree =
+                "        *\n" +
+                "       ***\n" +
+                "      *****\n" +
+                "     *******\n" +
+                "    *********\n";
+        System.out.println(tree);
     }
 }
