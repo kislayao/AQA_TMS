@@ -20,11 +20,11 @@ public class Main {
         System.out.print("Enter your surname: ");
         String surname = scanner.nextLine();
         System.out.print("Enter your age: ");
-        String age = scanner.nextLine();
+        int age = scanner.nextInt();
         System.out.print("Enter your height: ");
-        String height = scanner.nextLine();
+        int height = scanner.nextInt();
         System.out.print("Enter your weight: ");
-        String weight = scanner.nextLine();
+        double weight = scanner.nextDouble();
 
         System.out.println("Name: " + name);
         System.out.println("Surname: " + surname);
@@ -46,9 +46,9 @@ public class Main {
     {
         System.out.print("Enter weight in kilograms: ");
         double weight = scanner.nextDouble();
-        System.out.print("Enter height in meters: ");
+        System.out.print("Enter height in centimeters: ");
         double height = scanner.nextDouble();
-        double BMI = weight/(height*height);
+        double BMI = weight/((height/100)*(height/100));
         System.out.println("BMI result: " + BMI);
     }
 }
