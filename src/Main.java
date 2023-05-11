@@ -141,7 +141,7 @@ public class Main {
                 max = array[index];
             }
         }
-        System.out.println("Max number of array: " + max);
+        System.out.println("Max array number: " + max);
 
         // get min number
         min = array[0];
@@ -150,14 +150,14 @@ public class Main {
                 min = array[index];
             }
         }
-        System.out.println("Min number of array: " + min);
+        System.out.println("Min array number: " + min);
 
         // get average number
         for (int index = 0; index < array.length; index++) {
             sum += array[index];
         }
         avg = (double) sum / array.length;
-        System.out.println("Average number of array: " + avg);
+        System.out.println("Average array number: " + avg);
     }
 
     public static void compareAvgNumbersOfArrays() {
