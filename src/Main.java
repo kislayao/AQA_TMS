@@ -287,7 +287,7 @@ public class Main {
         {
             depositSum += depositSum*rate;
         }
-        System.out.println("Deposit after " + month + " months will be equals to " + depositSum);
+        System.out.println("Deposit amount after " + month + " months will be equal to " + depositSum);
     }
 
     public static void getMultiplicationTable()
