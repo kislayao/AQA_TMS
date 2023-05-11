@@ -188,7 +188,7 @@ public class Main {
 
     public static void getOddNumbers()
     {
-        System.out.print("Sequence of odd numbers from 1 to 99: ");
+        System.out.println("Sequence of odd numbers from 1 to 99: ");
         for (int number = 1; number <= 99; number++)
         {
             System.out.print(number + " ");
@@ -199,7 +199,7 @@ public class Main {
 
     public static void getDecreasingNumbers()
     {
-        System.out.print("Decreasing sequence of numbers from 5 to 1: ");
+        System.out.println("Decreasing sequence of numbers from 5 to 1: ");
         for (int number = 5; number >= 1; number--)
         {
             System.out.print(number + " ");
@@ -224,7 +224,7 @@ public class Main {
     {
         int number = 7;
 
-        System.out.print("Sequence of numbers with step equals to 7: ");
+        System.out.println("Sequence of numbers with step equals to 7: ");
         while (number <=98){
             System.out.print(number + " ");
             number += 7;
@@ -236,7 +236,7 @@ public class Main {
     {
         int counter = 1;
         int number = 0;
-        System.out.print("Sequence of numbers with step equals to -5: ");
+        System.out.println("Sequence of numbers with step equals to -5: ");
 
         while (counter <=10){
             System.out.print(number + " ");
@@ -248,7 +248,7 @@ public class Main {
 
     public static void getNumbersSquared()
     {
-        System.out.print("Sequence of squars of numbers from 10 to 20: ");
+        System.out.println("Sequence of squares of numbers from 10 to 20: ");
         for (int counter = 10; counter <=20; counter++)
         {
             System.out.print(counter*counter + " ");
@@ -261,7 +261,7 @@ public class Main {
         int number1 = 0;
         int number2 = 1;
         int sum;
-        System.out.print("10 first numbers of Fibonacci sequence: " + number1 + " " + number2 + " ");
+        System.out.print("10 first numbers of Fibonacci sequence: \n" + number1 + " " + number2 + " ");
 
         for (int counter = 1; counter <= 8; counter++)
         {
