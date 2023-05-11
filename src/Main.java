@@ -8,24 +8,24 @@ public class Main {
 
         // Task 1 - Program for displaying the name of the time of the year by the number of the month
         // switch-case operator
-        getSeasonNameSwitch(new Scanner(System.in));
+        getSeasonNameSwitch();
         System.out.println();
 
         // Task 2 - Program for displaying the name of the time of the year by the number of the month
         // if-else-if operator
-        getSeasonNameIf(new Scanner(System.in));
+        getSeasonNameIf();
         System.out.println();
 
         // Task 3 - Program for determining whether entered number is even or odd
-        getNumberType(new Scanner(System.in));
+        getNumberType();
         System.out.println();
 
         // Task 4 - Program for determining weather conditions
-        getWeatherTemperature(new Scanner(System.in));
+        getWeatherTemperature();
         System.out.println();
 
         // Task 5 - Program for determining the color of the rainbow
-        getRainbowColor(new Scanner(System.in));
+        getRainbowColor();
         System.out.println();
 
         // Part 2 - Loops
@@ -39,7 +39,7 @@ public class Main {
         System.out.println();
 
         // Task 3 - Program for getting sum of numbers from1 to entered one
-        getSum(new Scanner(System.in));
+        getSum();
         System.out.println();
 
         //Task 4 - Program for getting 7 14 21 ... 98 sequence
@@ -61,22 +61,22 @@ public class Main {
         System.out.println();
 
         // Task 2 - Program for getting final deposit sum
-        getFinalDepositSum(new Scanner(System.in));
+        getFinalDepositSum();
         System.out.println();
 
         // Task 3 - Program for getting multiplication table
         getMultiplicationTable();
     }
 
-    public static void Scanner(){
-        Scanner scanner = new Scanner(System.in);
-        scanner.close();
+    public static Scanner scanner (){
+        return new Scanner(System.in);
     }
 
-    public static void getSeasonNameSwitch(Scanner scanner)
+    public static void getSeasonNameSwitch()
     {
-        System.out.print("Please, enter month number: ");
-        int seasonNumber = scanner.nextInt();
+        System.out.print("Please, enter any month number: ");
+
+        int seasonNumber = scanner().nextInt();
 
         switch(seasonNumber){
             case 12:
@@ -105,10 +105,10 @@ public class Main {
         }
     }
 
-    public static void getSeasonNameIf(Scanner scanner)
+    public static void getSeasonNameIf()
     {
-        System.out.print("Please, enter month number: ");
-        int seasonNumber = scanner.nextInt();
+        System.out.print("Please, enter any month number: ");
+        int seasonNumber = scanner().nextInt();
 
         if (seasonNumber == 12 || seasonNumber == 1 || seasonNumber == 2) {
             System.out.println("Entered number the month corresponds to the time of the year Winter");
@@ -123,10 +123,10 @@ public class Main {
         }
     }
 
-    public static void getNumberType(Scanner scanner)
+    public static void getNumberType()
     {
         System.out.print("Please, enter any number: ");
-        int number = scanner.nextInt();
+        int number = scanner().nextInt();
 
         if (number%2 == 0){
             System.out.print("Entered number is even");
@@ -136,10 +136,10 @@ public class Main {
         System.out.println();
     }
 
-    public static void getWeatherTemperature(Scanner scanner)
+    public static void getWeatherTemperature()
     {
         System.out.print("Please, enter temperature value: ");
-        int temperature = scanner.nextInt();
+        int temperature = scanner().nextInt();
 
         if (temperature > -5){
             System.out.print("The weather is worm");
@@ -153,10 +153,10 @@ public class Main {
         System.out.println();
     }
 
-    public static void getRainbowColor(Scanner scanner)
+    public static void getRainbowColor()
     {
-        System.out.print("Please, enter number of color on rainbow: ");
-        int rainbowColour = scanner.nextInt();
+        System.out.print("Please, enter any number of a color on rainbow: ");
+        int rainbowColour = scanner().nextInt();
 
         switch (rainbowColour){
             case 1:
@@ -207,17 +207,17 @@ public class Main {
         System.out.println();
     }
 
-    public static void getSum(Scanner scanner)
+    public static void getSum()
     {
         System.out.print("Please, enter any positive number: ");
-        int enteredNumber = scanner.nextInt();
+        int enteredNumber = scanner().nextInt();
         int sum = 0;
 
         for (int counter = 1; counter <= enteredNumber; counter++)
         {
             sum += counter;
         }
-        System.out.println("The sum of numbers from 1 to entered one equals to " + sum);
+        System.out.println("The sum of numbers from 1 to " + enteredNumber + " equals to " + sum);
     }
 
     public static void getSequenceOfNumbers7()
@@ -275,12 +275,12 @@ public class Main {
         System.out.println();
     }
 
-    public static void getFinalDepositSum(Scanner scanner)
+    public static void getFinalDepositSum()
     {
         System.out.print("Please, enter initial deposit sum: ");
-        float depositSum = scanner.nextFloat();
+        float depositSum = scanner().nextFloat();
         System.out.print("Please, enter amount of months: ");
-        int month = scanner.nextInt();
+        int month = scanner().nextInt();
         float rate = 0.07f;
 
         for (int counter = 1; counter <= month; counter++)
