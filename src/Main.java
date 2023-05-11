@@ -1,3 +1,4 @@
+import java.util.Random;
 import java.util.Scanner;
 import java.util.Arrays;
 
@@ -15,7 +16,7 @@ public class Main {
         deleteNumberFromArray();
         System.out.println();
 
-        //Task 2 - Program for creating array from random numbers
+        // Task 2 - Program for creating array from random numbers
         createRandomArray();
         System.out.println();
 
@@ -75,7 +76,7 @@ public class Main {
         int[] array = new int[]{1, 3, 3, 98, 5};
 
         // printing initial array
-        System.out.println("This is initial array: ");
+        System.out.println("Initial array: ");
         for (int index = 0; index < array.length; index++){
             System.out.print(array[index] + " ");
         }
@@ -101,7 +102,7 @@ public class Main {
             }
         }
 
-        // printing array of without entered number
+        // print array without entered number
         System.out.println("Array without entered number:");
         for (int index = 0; index < arrayWithoutEnteredNumber.length; index++){
             System.out.print(arrayWithoutEnteredNumber[index] + " ");
@@ -126,6 +127,7 @@ public class Main {
             }
         }
 
+        System.out.print("Created array: ");
         // print array
         for (int index = 0; index < array.length; index++) {
             System.out.print(array[index] + " ");
@@ -139,7 +141,7 @@ public class Main {
                 max = array[index];
             }
         }
-        System.out.println("Max number: " + max);
+        System.out.println("Max number of array: " + max);
 
         // get min number
         min = array[0];
@@ -148,14 +150,14 @@ public class Main {
                 min = array[index];
             }
         }
-        System.out.println("Min number: " + min);
+        System.out.println("Min number of array: " + min);
 
         // get average number
         for (int index = 0; index < array.length; index++) {
             sum += array[index];
         }
-        avg = sum / array.length;
-        System.out.println("Average number: " + avg);
+        avg = (double) sum / array.length;
+        System.out.println("Average number of array: " + avg);
     }
 
     public static void compareAvgNumbersOfArrays() {
@@ -164,8 +166,8 @@ public class Main {
         double avg1 = 0;
         double avg2 = 0;
 
-        int[] array1 = new int[]{1, 0, 3, 98, 5};
-        int[] array2 = new int[]{1, 0, 4, 98, 5};
+        int[] array1 = new int[]{1, 0, 4, 98, 5};
+        int[] array2 = new int[]{1, 0, 3, 98, 5};
 
         System.out.print ("Array 1: ");
         for (int index = 0; index < array1.length; index++) {
@@ -180,16 +182,17 @@ public class Main {
         }
         System.out.println();
 
-        // get average number
+        // get average number of array 1
         for (int index = 0; index < array1.length; index++) {
             sum1 += array1[index];
         }
-        avg1 = sum1 / (double) array1.length;
+        avg1 = (double) sum1 / array1.length;
 
+        // get average number of array 2
         for (int index = 0; index < array2.length; index++) {
             sum2 += array2[index];
         }
-        avg2 = sum2 / (double) array2.length;
+        avg2 = (double) sum2 / array2.length;
 
         String result = (avg1 > avg2) ? "Average number of array 1 is more" : (avg1 < avg2) ?
                 "Average number of array 2 is more" : "Average numbers of arrays are equal";
@@ -210,19 +213,20 @@ public class Main {
         }
 
         int [] array = new int [enteredNumber];
+        Random ran = new Random();
 
         int evenNums = 0; // variable for counting even numbers
 
         // creating initial array and counting even numbers
         for (int index = 0; index < array.length; index++) {
-            array[index] = (int)(Math.random()*(enteredNumber+1));
+            array[index] = ran.nextInt();
             if (array[index]%2 == 0){
                 evenNums++;
             }
         }
 
         // printing initial array
-        System.out.println("This is initial array");
+        System.out.println("Initial array:");
         for (int index = 0; index < array.length; index++){
             System.out.print(array[index] + " ");
         }
@@ -240,7 +244,7 @@ public class Main {
         }
 
         // printing array of even nums
-        System.out.println("This is array of even nums of the initial array");
+        System.out.println("Array of even nums of the initial array:");
         for (int index = 0; index < arrayOfEvenNums.length; index++){
             System.out.print(arrayOfEvenNums[index] + " ");
         }
@@ -272,27 +276,15 @@ public class Main {
 
     public static void sortNames(){
         String[] names = new String[] {"Olga", "Vitaly", "Misha", "Tatsiana", "Alexey", "Maxim"};
-        System.out.println("Initial array: ");
-        for (int index = 0; index < names.length; index++){
-            System.out.print(names[index] + " ");
-        }
-        System.out.println();
+        System.out.println("Initial array: " + Arrays.toString(names));
         Arrays.sort(names);
-        System.out.println("Sorted array: ");
-        for (int index = 0; index < names.length; index++){
-            System.out.print(names[index] + " ");
-        }
-        System.out.println();
+        System.out.println("Sorted array: " + Arrays.toString(names));
     }
 
     public static void getBubbleSorting(){
         int [] array = new int [] {1, 88, 7, 55, 64, 1, 6};
-        System.out.println("Initial array:");
 
-        for (int index = 0; index < array.length; index++){
-            System.out.print(array[index] + " ");
-        }
-        System.out.println();
+        System.out.println("Initial array: " + Arrays.toString(array));
 
         for (int index1 = 0; index1 < array.length; index1++){
             for (int index2 = 0; index2 < array.length - 1 - index1; index2++){
@@ -303,13 +295,6 @@ public class Main {
                 }
             }
         }
-        System.out.println("Sorted array:");
-        for (int index = 0; index < array.length; index++){
-            System.out.print(array[index] + " ");
-        }
-        System.out.println();
+        System.out.println("Sorted array: " + Arrays.toString(array));
     }
-
-
-
 }
