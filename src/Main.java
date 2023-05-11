@@ -226,7 +226,7 @@ public class Main {
         }
 
         // printing initial array
-        System.out.println("Initial array:");
+        System.out.println("Created array:");
         for (int index = 0; index < array.length; index++){
             System.out.print(array[index] + " ");
         }
@@ -244,7 +244,7 @@ public class Main {
         }
 
         // printing array of even nums
-        System.out.println("Array of even nums of the initial array:");
+        System.out.println("An array of even numbers of the created array:");
         for (int index = 0; index < arrayOfEvenNums.length; index++){
             System.out.print(arrayOfEvenNums[index] + " ");
         }
@@ -253,7 +253,7 @@ public class Main {
 
     public static void replacingOddElement(){
 
-        int [] array = new int [] {1, 5, 7, 55, 64, 1, 6};
+        int [] array = new int [] {1, 5, 7, -55, -64, 1, 6};
         System.out.println("Initial array:");
 
         for (int index = 0; index < array.length; index++){
