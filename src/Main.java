@@ -14,11 +14,12 @@ public class Main {
 //        // Task 1 - Create chess board
 //        createChessBoard();
 //        System.out.println();
-        // Additional tasks
+
+//        // Additional tasks
 
          //Task 2 - Multiply 2 arrays
-
-//        System.out.println();
+        multiplyTwoArrays();
+        System.out.println();
 
 //        // Task 3 - Get sum of all the elements of 2-dimensional array
 //        getSumOfTheElements();
@@ -27,9 +28,9 @@ public class Main {
 //        // Task 4 - Show diagonals of a two-dimensional array
 //        showArrayDiagonals();
 //        System.out.println();
-
-        // Task 5 - Sort array elements
-        sort2DimensionalArrayElements();
+//
+//        // Task 5 - Sort array elements
+//        sort2DimensionalArrayElements();
 
 
 
@@ -112,6 +113,29 @@ public class Main {
         show2DimensionalArray(array);
     }
 
+    public static void multiplyTwoArrays(){
+        System.out.println("Task 2");
+        int[][] array1 = new int [][]{
+                {1, 3, 5},
+                {4, 3, 6},
+                {2, 2, 0}
+        };
+        int[][] array2 = new int [][]{
+                {0, 2, 5},
+                {1, 1, 2},
+                {2, 3, 0}
+        };
+        int [][] resultArray = new int[3][3];
+        for (int row = 0; row < resultArray.length; row++) {
+            for (int column = 0; column < resultArray[row].length; column++) {
+                resultArray[row][column] = array1[row][column]*array2[row][column]+
+                        array1[row][column+1]*array2[row+1][column] +
+                        array1[row+2][column+1]*array2[row+2][column];
+            }
+        }
+        show2DimensionalArray(resultArray);
+    }
+
     public static void getSumOfTheElements(){
         System.out.println("Task 3");
         int[][] array = new int [][]{
@@ -168,30 +192,51 @@ public class Main {
         System.out.println("Task 5");
         Random randomNumber = new Random();
         int [][] array = new int [4][3];
+        int counter = 0;
+        int index = 0;
 
         for (int row = 0; row < array.length; row++){
             for (int column = 0; column < array[row].length; column++){
-                array[row][column] = randomNumber.nextInt(1, 11) ;
+                array[row][column] = randomNumber.nextInt(1, 20);
+                counter++;
             }
         }
+
         System.out.println("This is initial array:");
         show2DimensionalArray(array);
 
-        for (int index = 0; index < array.length; index++) {
-            for (int row = 0; row < array[index].length; row++) {
-                for (int column = 0; column < array[index].length - 1 - row; column++) {
-                    if (array[row+1][column] > array[row][column + 1]) {
-                        int var = array[row+1][column];
-                        array[column] = array[column + 1];
-                        array[row+1][column + 1] = var;
-                    }
+        int [] arrayToSort = new int [counter];
+        // convert 2 dimensional array to 1 dimensional
+        for (int row = 0; row < array.length; row++){
+            for (int column = 0; column < array[row].length; column++){
+                arrayToSort[index] = array[row][column];
+                index ++;
+            }
+        }
+
+        // sort 1 dimensional array
+        for (int index1 = 0; index1 < arrayToSort.length; index1++){
+            for (int index2 = 0; index2 < arrayToSort.length - 1 - index1; index2++){
+                if(arrayToSort[index2] > arrayToSort[index2 + 1]){
+                    int var = arrayToSort[index2];
+                    arrayToSort[index2] = arrayToSort[index2 + 1];
+                    arrayToSort[index2 + 1] = var;
                 }
             }
         }
+
+        // convert 1 dimensional array to 2 dimensional
+        int ind = 0;
+        for (int row = 0; row < array.length; row++){
+            for (int column = 0; column < array[row].length; column++){
+                array[row][column] = arrayToSort[ind];
+                ind ++;
+            }
+        }
+
         System.out.println();
         System.out.println("This is sorted array:");
         show2DimensionalArray(array);
-
     }
 
 
