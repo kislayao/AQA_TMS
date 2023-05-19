@@ -7,33 +7,26 @@ public class Main {
 
         // Multiple arrays homework
 
-//        // Task 0 - Crate 3-dimensional array and increase each element
-//        increase3DimensionalArray();
-//        System.out.println();
-
-//        // Task 1 - Create chess board
-//        createChessBoard();
-//        System.out.println();
-
-//        // Additional tasks
-
-         //Task 2 - Multiply 2 arrays
-        multiplyTwoArrays();
+        // Task 0 - Crate 3-dimensional array and increase each element
+        increase3DimensionalArray();
         System.out.println();
 
-//        // Task 3 - Get sum of all the elements of 2-dimensional array
-//        getSumOfTheElements();
-//        System.out.println();
-//
-//        // Task 4 - Show diagonals of a two-dimensional array
-//        showArrayDiagonals();
-//        System.out.println();
-//
-//        // Task 5 - Sort array elements
-//        sort2DimensionalArrayElements();
+        // Task 1 - Create chess board
+        createChessBoard();
+        System.out.println();
 
+        // Additional tasks
 
+        // Task 3 - Get sum of all the elements of 2-dimensional array
+        getSumOfTheElements();
+        System.out.println();
 
+        // Task 4 - Show diagonals of a two-dimensional array
+        showArrayDiagonals();
+        System.out.println();
+
+        // Task 5 - Sort array elements
+        sort2DimensionalArrayElements();
     }
 
     public static Scanner scanner (){
@@ -113,30 +106,8 @@ public class Main {
         show2DimensionalArray(array);
     }
 
-    public static void multiplyTwoArrays(){
-        System.out.println("Task 2");
-        int[][] array1 = new int [][]{
-                {1, 3, 5},
-                {4, 3, 6},
-                {2, 2, 0}
-        };
-        int[][] array2 = new int [][]{
-                {0, 2, 5},
-                {1, 1, 2},
-                {2, 3, 0}
-        };
-        int [][] resultArray = new int[3][3];
-        for (int row = 0; row < resultArray.length; row++) {
-            for (int column = 0; column < resultArray[row].length; column++) {
-                resultArray[row][column] = array1[row][column]*array2[row][column]+
-                        array1[row][column+1]*array2[row+1][column] +
-                        array1[row+2][column+1]*array2[row+2][column];
-            }
-        }
-        show2DimensionalArray(resultArray);
-    }
-
     public static void getSumOfTheElements(){
+
         System.out.println("Task 3");
         int[][] array = new int [][]{
                 {1, 3, 5},
@@ -154,6 +125,7 @@ public class Main {
     }
 
     public static void showArrayDiagonals(){
+
         System.out.println("Task 4");
         int counter = 1;
         int[][] array = new int [3][3];
