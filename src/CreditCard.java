@@ -37,4 +37,8 @@ public class CreditCard {
         System.out.println("Card balance is: " + this.cardBalance);
         System.out.println();
     }
+
+    public void increase(double sum){
+        this.cardBalance += sum;
+    }
 }

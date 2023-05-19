@@ -27,6 +27,7 @@ public class Main {
         // Reduce card balance
         pekao.setCardBalance(reduceCardBalance(pekao.getCardBalance(), 200));
         printCardInfo(pekao.getCardHolder(), pekao.getCardNumber(), pekao.getCardBalance());
+
     }
 
     public static double increaseCardBalance(double cardBalance, double sumToAdd){
