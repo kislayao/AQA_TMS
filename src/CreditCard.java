@@ -14,31 +14,18 @@ public class CreditCard {
         this.cardBalance = cardBalance;
     }
 
-    public String getCardHolder() {
-        return cardHolder;
-    }
-
-    public String getCardNumber() {
-        return cardNumber;
-    }
-
-    public double getCardBalance() {
-        return cardBalance;
-    }
-
-    public void setCardBalance(double accountBalance) {
-        this.cardBalance = accountBalance;
-    }
-
-    // alternative to printCardInfo() method
-    public void getAccountInfo(){
+    public void getCardInfo(){
         System.out.println("Card holder is: " + this.cardHolder);
         System.out.println("Card number is: " + this.cardNumber);
         System.out.println("Card balance is: " + this.cardBalance);
         System.out.println();
     }
 
-    public void increase(double sum){
-        this.cardBalance += sum;
+    public void increaseCardBalance (double sumToAdd){
+        this.cardBalance += sumToAdd;
+    }
+
+    public void reduceCardBalance (double sumToSubtract){
+        this.cardBalance -= sumToSubtract;
     }
 }
