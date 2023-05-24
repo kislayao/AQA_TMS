@@ -7,10 +7,6 @@ public class JobDescription {
         this.jobTitle = jobTitle;
     }
 
-    public String getJobTitle() {
-        return jobTitle;
-    }
-
     public void printJobTitle(){
         System.out.println(jobTitle);
     }
