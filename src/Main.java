@@ -213,7 +213,7 @@ public class Main {
         int enteredNumber = scanner().nextInt();
         int sum = 0;
 
-        for (int counter = 1; counter <= enteredNumber; counter++)
+        for (int counter = 1; counter < enteredNumber; counter++)
         {
             sum += counter;
         }
