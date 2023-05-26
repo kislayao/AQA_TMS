@@ -2,7 +2,6 @@ package Shapes;
 
 public abstract class Shape {
     private String shapeTitle;
-    private double radius;
 
 
     public Shape (String shapeTitle){
@@ -11,10 +10,6 @@ public abstract class Shape {
 
     public String getShapeTitle() {
         return shapeTitle;
-    }
-
-    public double getRadius() {
-        return radius;
     }
 
     abstract void getAreaOfTheShape();
