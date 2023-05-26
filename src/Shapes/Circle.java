@@ -1,7 +1,6 @@
 package Shapes;
 
 public class Circle extends Shape{
-
     private double radius;
 
     public Circle (String shapeTitle, double radius){
