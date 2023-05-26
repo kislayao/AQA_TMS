@@ -1,9 +1,9 @@
 package Work;
 
-public class JobDescription {
-    private String jobTitle;
+public class Employees {
 
-    public JobDescription(String jobTitle){
+    String jobTitle;
+    public Employees(String jobTitle){
         this.jobTitle = jobTitle;
     }
 
@@ -11,4 +11,3 @@ public class JobDescription {
         System.out.println(jobTitle);
     }
 }
-

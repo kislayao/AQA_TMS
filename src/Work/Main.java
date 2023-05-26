@@ -2,13 +2,12 @@ package Work;
 
 public class Main {
     public static void main(String[] args) {
-        JobDescription[] jobs = {
+        Employees[] jobs = {
                 new Director("Director"),
-                new Employee("Employee"),
                 new Accountant("Accountant")
         };
 
-        for (JobDescription titles: jobs){
+        for (Employees titles: jobs){
             titles.printJobTitle();
         }
     }
