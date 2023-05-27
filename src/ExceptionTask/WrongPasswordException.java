@@ -6,6 +6,10 @@ public class WrongPasswordException extends Exception {
                 "Password and confirmPassword should be equal");
     }
 
+    public WrongPasswordException(String message) {
+        super(message);
+    }
+
     public boolean exitValue() {
         return false;
     }

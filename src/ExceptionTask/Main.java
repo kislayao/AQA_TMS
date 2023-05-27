@@ -6,11 +6,12 @@ public class Main {
         CheckData dataToCheck = new CheckData();
 
         try {
-            dataToCheck.checkData("testLogin", "pswd1", "pswd1");
+            dataToCheck.checkData("tes tLogin", "pswd 1", "pswd1");
         } catch (WrongLoginException eLogin) {
             System.err.println(eLogin);
             eLogin.exitValue();
-        } catch (WrongPasswordException ePassword) {
+        }
+        catch (WrongPasswordException ePassword) {
             System.err.println(ePassword);
             ePassword.exitValue();
         }

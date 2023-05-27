@@ -1,4 +1,5 @@
-package ExceptionTask;
+package
+        ExceptionTask;
 
 public class CheckData {
 
@@ -6,7 +7,7 @@ public class CheckData {
             throws WrongLoginException, WrongPasswordException {
 
         if (login.length() >= 20 || login.contains(" ")) {
-            throw new WrongLoginException();
+            throw new WrongLoginException("Rewritten exception example");
         }
 
         if (password.length() >= 20 || password.contains(" ") || !password.matches(".*\\d.*")) {
