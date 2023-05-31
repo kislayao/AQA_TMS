@@ -3,9 +3,9 @@ package Work;
 public class Main {
     public static void main(String[] args) {
         Employees[] jobs = {
-                new Director("Director"),
-                new Accountant("Accountant"),
-                new Employee("Regular employee")
+                new Director(),
+                new Accountant(),
+                new Employee()
         };
 
         for (Employees titles: jobs){
