@@ -1,3 +1,5 @@
+package MainTask;
+
 import java.util.Scanner;
 
 public class Methods {
