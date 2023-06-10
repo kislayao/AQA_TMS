@@ -2,23 +2,37 @@ package com.example.aqa_tms_gui;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.ListView;
+import javafx.scene.control.TextField;
 
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.Scanner;
+import java.util.Map;
+import java.util.TreeMap;
 
 public class HelloController {
 
-    public ListView listView = new ListView<>();
+    public ListView word = new ListView<>();
+    public ListView translate = new ListView<>();
+    public TextField inputField = new TextField();
 
-    public void action(ActionEvent actionEvent) throws IOException {
+    Map<String, String> words = new TreeMap<>();
 
-        Scanner sc = new Scanner(new FileReader("src/main/resources/com/example/aqa_tms_gui/text.txt")).useDelimiter(",\\n");
-        String str;
+    public void action(ActionEvent actionEvent) {
 
-        while (sc.hasNext()) {
-            str = sc.next();
-            listView.getItems().add(str);
+        word.getItems().clear();
+        translate.getItems().clear();
+
+        try {
+            String str = inputField.getText();
+            String[] temp = str.split(" ", 2);
+            words.put(temp[0], temp[1]);
+        } catch (Exception e) {
+            System.err.println("Please word and it's translation");
         }
+
+        inputField.clear();
+
+        words.forEach((key, value) -> {
+            word.getItems().add(key);
+            translate.getItems().add(value);
+        });
     }
 }
